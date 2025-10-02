@@ -25,27 +25,20 @@ body{
   letter-spacing: .05ch;
 }
 
+#webpage-title {
+  display: block;
+  margin: 0 auto 0 auto; /* no gap below title */
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+}
+
 /* Header */
 .header-container {
   position: relative;
   text-align: center;
-  padding: 20px 0;
-  min-height: 220px; /* space for floater */
-}
-
-/* Floater on top-right */
-.floating-image-container {
-  position: absolute;
-  top: 5px;
-  right: 60px;
-  z-index: 10;
-}
-
-#floating-img {
-  width: 350px;
-  display: block;
-  will-change: transform;
-  pointer-events: none; /* optional */
+  padding: 0;
+  min-height: 0;
 }
 
 /* Page width */
@@ -77,14 +70,21 @@ body{
 .panel__title{
   margin:0;
   padding:10px 12px;
-  background: linear-gradient(#ffffff,#f1f1f1);
+  background: rgb(207, 181, 219);
   border-bottom: var(--border) solid var(--ink);
   font-weight:700;
   text-transform: lowercase;
   letter-spacing: .1ch;
+  text-align: center;
 }
 
 .panel__body{ padding: 12px; }
+
+/* Nini face image */
+#nini-face {
+  width: 200px;
+  height: auto;
+}
 
 /* Left navigation column */
 .left .nav{
@@ -96,7 +96,7 @@ body{
 .left .nav a{
   text-decoration:none;
   color:var(--ink);
-  background: #fff;
+  background: #e5e5e5;
   border: var(--border) solid var(--ink);
   border-radius: 4px;
   padding: 8px 10px;
@@ -129,27 +129,5 @@ body{
   margin: 8px 0;
 }
 
-/* Title + banner layering */
-.title-stack {
-  position: relative;
-  display: block;         
-  width: 100%;             
-  overflow: hidden;        
-}
 
-#title-banner {
-  display: block;
-  width: 100%;         
-  height: auto;
-}
-
-#webpage-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500px;         
-  height: auto;
-  z-index: 2;
-}
 
