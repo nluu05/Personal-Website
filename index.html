@@ -1,117 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Nini's Comfy Webpage</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Three-Column Retro Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="header-container">
+    <img id="webpage-title" src="images/webpage_title.png" alt="Website Title">
 
-    <!-- Link to external CSS file -->
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <!-- Header Container -->
-    <div class="header-container">
-      <img id="webpage-title" src="images/webpage_title.png" alt="Website Title" width="450">
-
-      <!-- Floating Image -->
-      <div class="floating-image-container">
-        <img id="floating-img" src="images/nini_thinking.png" alt="Floating image" width="400">
-      </div>
+    <div class="floating-image-container">
+      <img id="floating-img" src="images/nini_floating.png" alt="Floating image">
     </div>
+  </div>
 
-    <!-- Content Container -->
-    <div class="content-container">
-      <!-- Bio Container -->
-      <div class="bio-container">
-        <div class="bio-header">
-          <div class="title">bio</div>
-          <div class="window-btns">— ☐ ✕</div>
+  <div class="page">
+    <div class="columns">
+      <!-- (your same left, center, right columns as before) -->
+      <!-- Left -->
+      <aside class="left">
+        <div class="panel">
+          <h2 class="panel__title">main</h2>
+          <nav class="nav panel__body">
+            <a href="#">sitemap</a>
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">artwork</a>
+            <a href="#">html/css starter</a>
+            <a href="#">...</a>
+          </nav>
         </div>
-        <div class="bio-content">
-          <div class="bio-text">
-            <p><span>age:</span> 19</p>
-            <p><span>pronouns:</span> she/her/hers</p>
-            <p><span>nationality:</span> vietnamese 🇻🇳 </p>
-          </div>
-          <img class="bio-img" src="images/nini_face.png" alt="profile">
+        <div class="panel">
+          <h2 class="panel__title">abt me</h2>
+          <nav class="nav panel__body">
+            <a href="#">my shrine</a>
+            <a href="#">manga/anime rec</a>
+            <a href="#">music</a>
+            <a href="#">collections</a>
+          </nav>
         </div>
-        <div class="bio-footer">◼◼◼</div>
-      </div>
+      </aside>
 
-      <!-- Navigation Container -->
-      <div class="navigation-container">
-        <div class="navigation-header">
-          <div class="title">navigation</div>
-          <div class="window-btns">— ☐ ✕</div>
-        </div>
-        <div class="navigation-content">
-          <div class="navigation-buttons">
-            <a href="#home" class="button-red">home</a>
-            <a href="#shrine" class="button-orange">shrine</a>
-            <a href="#projects" class="button-yellow">projects</a>
-            <a href="#personal" class="button-green">personal</a>
-            <a href="#art" class="button-blue">artwork</a>
-            <a href="#music" class="button">music</a>
-          </div>
-        </div>
-        <div class="navigation-footer">◼◼◼</div>
-      </div>
-
-      <!-- Music Container -->
-      <div class="music-container">
-        <div class="music-header">
-          <div class="title">music</div>
-          <div class="window-btns">— ☐ ✕</div>
-        </div>
-
-        <!-- NEW MUSIC SPOTLIGHT CONTENT -->
-        <div class="music-content">
-          <div class="music-header-bar">
-            <div class="left">nini's current favs!</div>
-            <div class="right"> 11:03 AM</div>
-          </div>
-
-          <div class="music-spotlight">
-            <!-- Songs -->
-            <div class="songs">
-              <table>
-                <tr><td>maple syrup</td><td>the backseat lovers</td></tr>
-                <tr><td>nobody new</td><td>the marías</td></tr>
-                <tr><td>tough luck</td><td>laufey</td></tr>
-              </table>
-            </div>
-
-            <!-- Video -->
-            <div class="video">
-              <iframe width="200" height="100" 
-              src="https://www.youtube.com/embed/sElE_BfQ67s?si=fx67oAOYGFk6TwfC" 
-              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
-              clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-              <!-- change height from 200 to 100 -->
-            </iframe>
-              <div>0:00 — 4:50</div>
-            </div>
-
-            <!-- Fav Artists -->
-            <div class="fav-artists">
-              <h4>fav artists</h4>
-              <ul>
-                <li>the marías</li>
-                <li>the backseat lovers</li>
-                <li>cigarettes after sex</li>
-                <li>mico</li>
-                <li>sombr</li>
-              </ul>
-            </div>
+      <!-- Center -->
+      <main class="center">
+        <div class="panel">
+          <h2 class="panel__title">welcome</h2>
+          <div class="panel__body">
+            <p>hi there, i’m <strong>nini</strong>. this is my first time making a website! i'm currently a software engineering student and i just wanted to throw some of my hobbies and skills together. 
+              basically im throwing up all my knowledge and praying it works LOL... ALSO, all of the artwork on my page is drawn by me so please do not take it!!</p>
+            <div class="dotted" aria-hidden="true"></div>
+            <!-- class="note">tip: duplicate <code>.panel</code> blocks to add more sections in the middle column. -->
           </div>
         </div>
 
-        <div class="music-footer">◼◼◼</div>
-      </div>
+        <div class="panel">
+          <h2 class="panel__title">posts</h2>
+          <div class="panel__body">
+            <p></p>
+          </div>
+        </div>
+      </main>
+
+      <!-- Right -->
+      <aside class="right">
+        <div class="panel widget">
+          <h2 class="panel__title">updates</h2>
+          <div class="panel__body">
+            <p>▸ oct 2, 2025: started the skeloton of my website :3</p>
+          </div>
+        </div>
+        <div class="panel widget">
+          <h2 class="panel__title">chatbox</h2>
+          <div class="panel__body">
+            <p>WORK IN PROCESS</p>
+          </div>
+        </div>
+      </aside>
     </div>
+  </div>
 
-    <!-- Link external JS -->
-    <script src="script.js"></script>
-  </body>
+  <!-- Place scripts at the end so DOM exists -->
+  <script src="script.js"></script>
+</body>
 </html>
