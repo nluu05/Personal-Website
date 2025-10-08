@@ -1,5 +1,5 @@
 :root{
-  --bg: #efefef;
+  --bg: #dcd4df;
   --ink: #222;
   --ink-soft:#555;
   --panel:#f9f9f9;
@@ -30,6 +30,14 @@ body{
   margin: 0 auto 0 auto; /* no gap below title */
   width: 100%;
   max-width: 1200px;
+  height: auto;
+}
+
+#sitemap-title {
+  display: block;
+  margin: 0 auto 0 auto; 
+  width: 100%;
+  max-width: 500px;
   height: auto;
 }
 
@@ -78,12 +86,35 @@ body{
   text-align: center;
 }
 
+.panel__title__left {
+  margin:0;
+  padding:10px 12px;
+  background: rgb(207, 181, 219);
+  border-bottom: var(--border) solid var(--ink);
+  font-weight:700;
+  text-transform: lowercase;
+  letter-spacing: .1ch;
+  text-align: left;
+}
+
 .panel__body{ padding: 12px; }
 
 /* Nini face image */
 #nini-face {
   width: 200px;
   height: auto;
+  
+}
+
+#sleepy {
+  width: 100px;
+  height: auto;
+}
+
+.flower-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
 }
 
 /* Left navigation column */
@@ -102,7 +133,7 @@ body{
   padding: 8px 10px;
   box-shadow: 0 1px 0 var(--ink);
 }
-.left .nav a:hover{ background:#fafafa; }
+.left .nav a:hover{ background:#b9b9b9; }
 
 /* Center */
 .note{ font-size: 13px; color: var(--ink-soft); }
@@ -120,6 +151,66 @@ body{
   .left{ order: -1; }
 }
 
+.about-container {
+  display: flex;
+  align-items: center;   
+  gap: 1rem;            
+  flex-direction: row-reverse; 
+}
+
+.about-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Updates panel: sticky title + scrollable body showing ~3 items */
+.updates .panel__title{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.updates .panel__body{
+  padding: 0;                   /* we'll pad the list instead */
+}
+
+/* Scroll area */
+.updates-list{
+  --row-h: 2.2rem;              /* approx height of one row */
+  max-height: calc(var(--row-h) * 4 + 12px);  /* show ~3 items + padding */
+  overflow-y: auto;
+
+  margin: 0;
+  padding: 8px 12px 12px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Each update item */
+.updates-list li{
+  position: relative;
+  padding: .55rem .75rem .55rem 1.4rem;
+  background: #fff;
+  border: var(--border) solid rgb(198, 198, 198);
+  border-radius: 8px;
+  line-height: 1.35;
+}
+
+/* little triangle bullet */
+.updates-list li::before{
+  content: "▸";
+  position: absolute;
+  left: .55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 700;
+}
+
+.updates-list{ overscroll-behavior: contain; }
+
 /* Dotted separator */
 .dotted{
   background:
@@ -128,6 +219,26 @@ body{
   opacity:.7;
   margin: 8px 0;
 }
+
+/* Space separator for readability */
+.text-box {
+  padding: 10px;   /* adds space inside the box */
+  line-height: 1.5; 
+}
+
+.photo-padding {
+  padding: 10px;    /* adds space around the image */
+}
+
+/* Simple round bubble for highlighted words */
+.bubble{
+  display: inline-block;
+  padding: .1em .45em;
+  background: rgb(252, 223, 252);
+  border-radius: 999px;
+  line-height: 1;
+}
+
 
 
 

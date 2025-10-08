@@ -1,3 +1,4 @@
+// Floating image animation
 const img = document.getElementById("floating-img");
 let angle = 0;
 
@@ -9,3 +10,5 @@ function floatImage() {
 }
 
 floatImage();
+
+
