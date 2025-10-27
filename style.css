@@ -211,6 +211,35 @@ body{
 
 .updates-list{ overscroll-behavior: contain; }
 
+/* About me page */
+/* Make the center column wider just for the about page */
+.about .columns {
+  grid-template-columns: 180px 1.5fr 180px;
+}
+
+/* About content layout */
+.about-grid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.about-avatar {
+  width: 160px;
+  border-radius: var(--radius);
+  border: var(--border) solid var(--ink);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.about-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
 /* Dotted separator */
 .dotted{
   background:
@@ -237,6 +266,22 @@ body{
   background: rgb(252, 223, 252);
   border-radius: 999px;
   line-height: 1;
+}
+
+a:link {
+  color: rgb(218, 163, 218)
+}
+
+a:visited {
+  color: rgb(134, 87, 134)
+}
+
+a:hover {
+  color: rgb(207, 181, 219)
+}
+
+a:active {
+  color: rgb(150, 105, 150)
 }
 
 
